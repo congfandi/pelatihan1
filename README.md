@@ -1,17 +1,17 @@
-# pelatihan1
+## IFO PENTING
 
-A new Flutter project.
 
-## Getting Started
+APLIKASI INI SUDAH DAPAT DIJALANKAN DI BEEBRAPA PLATFORM ANTARA LAIN
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# pelatihan1
+- ANDROID
+- IOS
+- WINDOWS
+- LINUX
+- MAC OS
+- WEB
+- DESKTOP
+- KOMPUTER
+- LAPTOP
+- TABLET
+- SMARTPHONE
+- IPAD
