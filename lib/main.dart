@@ -1,12 +1,20 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:pelatihan1/chat_statefull/chat_view.dart';
+import 'package:pelatihan1/counter_firebase.dart';
 import 'package:pelatihan1/counter_provider/view.dart';
 import 'package:pelatihan1/counter_statefull/counter_statefull.dart';
+import 'package:pelatihan1/firebase_options.dart';
 import 'package:pelatihan1/responsive_location.dart';
 import 'package:pelatihan1/responsive_size.dart';
 import 'package:pelatihan1/sample_layout.dart';
 import 'package:pelatihan1/sample_stack.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -35,7 +43,9 @@ class MyApp extends StatelessWidget {
         // home: const ResponsiveSize()
         // home: const ResponsiveLocation()
         // home: const CounterStateFull(),
-        home: const CounterPage());
+        // home: const CounterPage());
+        // home: const ChatView());
+        home: const CounterFirebase());
   }
 }
 

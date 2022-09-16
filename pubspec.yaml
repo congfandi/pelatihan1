@@ -38,6 +38,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^0.13.5
   provider: ^6.0.3
+  aberchat: ^0.0.1
+  firebase_core: ^1.22.0
+  shared_preferences: ^2.0.15
+  firebase_database: ^9.1.4
 
 dev_dependencies:
   flutter_test:

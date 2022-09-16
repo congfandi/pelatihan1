@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "632001772349",
+    "project_id": "pelatihan-pt",
+    "storage_bucket": "pelatihan-pt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632001772349:android:43406455b201725436e354",
+        "android_client_info": {
+          "package_name": "com.congfandi.pelatihan1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632001772349-n93j0s13un0b65agbhpjg3sqqoo6b9i8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgCN_7H7iyXEr4QAUDuq-QYFtphgDJ7Xc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632001772349-n93j0s13un0b65agbhpjg3sqqoo6b9i8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
