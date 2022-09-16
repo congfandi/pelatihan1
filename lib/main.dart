@@ -38,14 +38,14 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: const SampleLayout(),
+        // home: const SampleLayout(),
         // home: const SampleStack(),
         // home: const ResponsiveSize()
         // home: const ResponsiveLocation()
         // home: const CounterStateFull(),
         // home: const CounterPage());
         // home: const ChatView());
-        // home: const CounterFirebase(),
+        home: const CounterFirebase(),
     );
   }
 }

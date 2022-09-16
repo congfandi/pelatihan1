@@ -15,15 +15,31 @@ class _CounterFirebaseState extends State<CounterFirebase> {
 
   @override
   void initState() {
+    database.setPersistenceEnabled(true);
+    database.setLoggingEnabled(true);
+    database.ref().keepSynced(true);
+    database.databaseURL =
+        'https://pelatihan-pt-default-rtdb.asia-southeast1.firebasedatabase.app';
     counterRef = database.ref("counter").child("data");
+    databaseGet();
     super.initState();
+  }
+
+  databaseGet() {
+    counterRef?.once().then((DatabaseEvent snapshot) {
+      print('Data : ${snapshot.snapshot.value}');
+    });
+
+    counterRef?.onValue.listen((event) {
+      print('Data : ${event.snapshot.value}');
+    });
   }
 
   void _counterIncrement() {
     counter++;
-    counterRef?.set(counter).then((value){
+    counterRef?.set(counter).then((value) {
       debugPrint("Counter Updated");
-    }).catchError((err){
+    }).catchError((err) {
       debugPrint("Error: $err");
     });
   }
