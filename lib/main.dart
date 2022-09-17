@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:pelatihan1/chat_statefull/chat_view.dart';
 import 'package:pelatihan1/counter_firebase.dart';
 import 'package:pelatihan1/counter_provider/view.dart';
+import 'package:pelatihan1/counter_sqflite/counter_sqflite.dart';
 import 'package:pelatihan1/counter_statefull/counter_statefull.dart';
 import 'package:pelatihan1/firebase_options.dart';
+import 'package:pelatihan1/helpers/db_helper.dart';
+import 'package:pelatihan1/helpers/pref_helper.dart';
 import 'package:pelatihan1/responsive_location.dart';
 import 'package:pelatihan1/responsive_size.dart';
 import 'package:pelatihan1/sample_layout.dart';
@@ -15,6 +18,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  PrefHelper.init();
   runApp(const MyApp());
 }
 
@@ -25,27 +29,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          // This is the theme of your application.
-          //
-          // Try running your application with "flutter run". You'll see the
-          // application has a blue toolbar. Then, without quitting the app, try
-          // changing the primarySwatch below to Colors.green and then invoke
-          // "hot reload" (press "r" in the console where you ran "flutter run",
-          // or simply save your changes to "hot reload" in a Flutter IDE).
-          // Notice that the counter didn't reset back to zero; the application
-          // is not restarted.
-          primarySwatch: Colors.blue,
-        ),
-        // home: const SampleLayout(),
-        // home: const SampleStack(),
-        // home: const ResponsiveSize()
-        // home: const ResponsiveLocation()
-        // home: const CounterStateFull(),
-        // home: const CounterPage());
-        // home: const ChatView());
-        home: const CounterFirebase(),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // Try running your application with "flutter run". You'll see the
+        // application has a blue toolbar. Then, without quitting the app, try
+        // changing the primarySwatch below to Colors.green and then invoke
+        // "hot reload" (press "r" in the console where you ran "flutter run",
+        // or simply save your changes to "hot reload" in a Flutter IDE).
+        // Notice that the counter didn't reset back to zero; the application
+        // is not restarted.
+        primarySwatch: Colors.blue,
+      ),
+      // home: const SampleLayout(),
+      // home: const SampleStack(),
+      // home: const ResponsiveSize()
+      // home: const ResponsiveLocation()
+      // home: const CounterStateFull(),
+      // home: const CounterPage());
+      // home: const ChatView());
+      // home: const CounterFirebase(),
+      home: const CounterSqfLite()
     );
   }
 }

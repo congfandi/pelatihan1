@@ -1,5 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:pelatihan1/helpers/pref_helper.dart';
 
 class CounterFirebase extends StatefulWidget {
   const CounterFirebase({Key? key}) : super(key: key);
@@ -22,6 +23,7 @@ class _CounterFirebaseState extends State<CounterFirebase> {
         'https://pelatihan-pt-default-rtdb.asia-southeast1.firebasedatabase.app';
     counterRef = database.ref("counter").child("data");
     databaseGet();
+    debugPrint("CounterPref: ${PrefHelper.getInt("counter")}");
     super.initState();
   }
 
@@ -37,7 +39,9 @@ class _CounterFirebaseState extends State<CounterFirebase> {
 
   void _counterIncrement() {
     counter++;
+    PrefHelper.setInt("counter", counter);
     counterRef?.set(counter).then((value) {
+      debugPrint("CounterPref: ${PrefHelper.getInt("counter")}");
       debugPrint("Counter Updated");
     }).catchError((err) {
       debugPrint("Error: $err");
