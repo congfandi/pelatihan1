@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pelatihan1/helpers/db_helper.dart';
-import 'package:pelatihan1/models/Counter.dart';
+import 'package:pelatihan1/models/counter.dart';
 
 class CounterSqfLite extends StatefulWidget {
   const CounterSqfLite({Key? key}) : super(key: key);

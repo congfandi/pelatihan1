@@ -17,5 +17,7 @@ APLIKASI INI SUDAH DAPAT DIJALANKAN DI BEEBRAPA PLATFORM ANTARA LAIN
 - IPAD
 
 
+HIVE GENERATE : flutter packages pub run build_runner build --delete-conflicting-outputs
+
 Sample APPID : 631ae2ed3a4f071fd104365a
 Sample ApiKey : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiZmFiMGNkYWItMDA3My00ZDY0LTg4OTItYjNlODg4YWMyYTJkIiwiaWF0IjoxNjYyNzA2NDEzLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0In0.0lBM1iZkfcdC5yXL3y5qnFYpwKvtT20-s0W2WsBe02w

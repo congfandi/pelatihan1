@@ -1,3 +1,8 @@
+
+import 'package:hive/hive.dart';
+
+part 'counter.g.dart';
+@HiveType(typeId: 1)
 class Counter {
   Counter({
     this.id,
@@ -11,8 +16,11 @@ class Counter {
     count = json['count'];
   }
 
+  @HiveField(0)
   int? id;
+  @HiveField(1)
   String? name;
+  @HiveField(2)
   int? count;
 
   Map<String, dynamic> toJson() {

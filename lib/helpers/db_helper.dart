@@ -1,4 +1,4 @@
-import 'package:pelatihan1/models/Counter.dart';
+import 'package:pelatihan1/models/counter.dart';
 import 'package:sqflite/sqflite.dart';
 import 'dart:io';
 
