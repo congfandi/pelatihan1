@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:pelatihan1/chat_statefull/chat_view.dart';
 import 'package:pelatihan1/counter_firebase.dart';
+import 'package:pelatihan1/counter_http/counter_http.dart';
 import 'package:pelatihan1/counter_provider/view.dart';
 import 'package:pelatihan1/counter_sqflite/counter_sqflite.dart';
 import 'package:pelatihan1/counter_statefull/counter_statefull.dart';
@@ -57,7 +58,8 @@ class MyApp extends StatelessWidget {
       // home: const ChatView());
       // home: const CounterFirebase(),
       // home: const CounterSqfLite(),
-      home: const CounterHive(),
+      // home: const CounterHive(),
+      home: const CounterHttp(),
     );
   }
 }
