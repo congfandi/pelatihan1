@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:pelatihan1/helpers/api_helper.dart';
+import 'package:pelatihan1/models/Base_response.dart';
 import 'package:pelatihan1/models/counter.dart';
+
+import 'api_client.dart';
 
 class CounterHttp extends StatefulWidget {
   const CounterHttp({Key? key}) : super(key: key);
@@ -12,13 +14,16 @@ class CounterHttp extends StatefulWidget {
 
 class _CounterHttpState extends State<CounterHttp> {
   List<Counter> counters = [];
+  var client = ApiClient();
 
-  void _getCounter() {
-    http.get(Uri.parse(ApiHelper.counter)).then(
-      (value) {
-        print(value.body);
-      },
-    );
+  void _getCounter() async {
+    var rest = await client.get(Uri.parse(ApiHelper.counter));
+    if (rest.statusCode == 200) {
+      setState(() {
+        BaseResponse baseResponse = BaseResponse.fromJson(rest.body);
+        counters = baseResponse.data ?? [];
+      });
+    }
   }
 
   @override
@@ -33,8 +38,14 @@ class _CounterHttpState extends State<CounterHttp> {
       appBar: AppBar(
         title: const Text('CounterHttp'),
       ),
-      body: const Center(
-        child: Text('CounterHttp'),
+      body: ListView.builder(
+        itemCount: counters.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(counters[index].name ?? ''),
+            subtitle: Text(counters[index].count.toString()),
+          );
+        },
       ),
     );
   }
