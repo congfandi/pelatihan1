@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pelatihan1/helpers/api_helper.dart';
-import 'package:pelatihan1/models/Base_response.dart';
+import 'package:pelatihan1/models/base_response.dart';
 import 'package:pelatihan1/models/counter.dart';
 
 import 'api_client.dart';
