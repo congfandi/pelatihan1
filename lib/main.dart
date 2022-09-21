@@ -48,11 +48,11 @@ class MyApp extends StatelessWidget {
             fontFamily: AppFont.primaryFont),
         // home: const SampleLayout(),
         // home: const SampleStack(),
-        // home: const ResponsiveSize()
-        // home: const ResponsiveLocation()
+        // home: const ResponsiveSize(),
+        // home: const ResponsiveLocation(),
         // home: const CounterStateFull(),
-        // home: const CounterPage());
-        // home: const ChatView());
+        // home: const CounterPage(),
+        // home: const ChatView(),
         // home: const CounterFirebase(),
         // home: const CounterSqfLite(),
         // home: const CounterHive(),
