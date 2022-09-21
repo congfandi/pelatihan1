@@ -16,6 +16,8 @@ class SearchPage extends StatelessWidget {
     final provider = context.read<SearchProvider>();
     final state = provider.state;
 
-    return Container();
+    return const Center(
+      child: Text("Search"),
+    );
   }
 }

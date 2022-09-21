@@ -27,6 +27,7 @@ class _CounterFirebaseState extends State<CounterFirebase> {
     super.initState();
   }
 
+
   databaseGet() {
     counterRef?.once().then((DatabaseEvent snapshot) {
       print('Data : ${snapshot.snapshot.value}');

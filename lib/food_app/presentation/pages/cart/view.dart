@@ -16,6 +16,8 @@ class CartPage extends StatelessWidget {
     final provider = context.read<CartProvider>();
     final state = provider.state;
 
-    return Container();
+    return const Center(
+      child: Text("Cart"),
+    );
   }
 }

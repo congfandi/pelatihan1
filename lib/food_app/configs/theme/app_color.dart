@@ -12,6 +12,10 @@ class AppColor{
   static const Color textTertiary = Color(0xFFCACACA);
   static const Color background = Color(0xFFF8F5F2);
   static const Color white = Color(0xFFFFFFFF);
+
+
+
+
   static MaterialColor get primarySwatch => MaterialColor(brandPrimary.value, {
   50: _tintColor(brandPrimary, 0.9),
   100: _tintColor(brandPrimary, 0.8),

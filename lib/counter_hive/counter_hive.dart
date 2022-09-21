@@ -24,11 +24,7 @@ class _CounterHiveState extends State<CounterHive> {
   void _saveCounter() {
     count++;
     Counter counter = Counter(count: count, name: "fandi");
-    box.add(counter).then((value){
-      debugPrint("hide success $value");
-    }).catchError((err){
-      debugPrint("hive error $err");
-    });
+    box.add(counter);
     _getBox();
     setState(() {});
   }

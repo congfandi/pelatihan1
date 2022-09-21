@@ -1,17 +1,16 @@
-import 'dart:ui';
-
+import 'package:flutter/material.dart';
 import 'package:pelatihan1/food_app/configs/theme/app_color.dart';
 
 class AppFont {
   static const String primaryFont = 'Poppins';
-  static TextStyle h1 = TextStyle(
+  static TextStyle get h1 => const TextStyle(
     fontFamily: primaryFont,
     fontWeight: FontWeight.w600,
     fontSize: 28,
     color: AppColor.textPrimary,
   );
 
-  static TextStyle h2 = TextStyle(
+  static TextStyle get h2 => const TextStyle(
     fontFamily: primaryFont,
     fontWeight: FontWeight.w500,
     fontSize: 24,
@@ -39,7 +38,7 @@ class AppFont {
     color: AppColor.textPrimary,
   );
 
-  static TextStyle normalRegular = TextStyle(
+  static TextStyle get normalRegular => const TextStyle(
     fontFamily: primaryFont,
     fontWeight: FontWeight.w400,
     fontSize: 16,
