@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pelatihan1/food_app/configs/theme/app_color.dart';
+import 'package:pelatihan1/food_app/configs/theme/app_font.dart';
 import 'package:pelatihan1/food_app/utils/resources/icons.dart';
 
 class MenuDashboard extends StatelessWidget {
@@ -18,7 +20,7 @@ class MenuDashboard extends StatelessWidget {
 
   final List<Menu> menus = [
     Menu(
-      name: "Cheap",
+      name: "Favorite",
       icon: IC.icFavorite,
     ),
     Menu(
@@ -26,24 +28,37 @@ class MenuDashboard extends StatelessWidget {
       icon: IC.icTag,
     ),
     Menu(
-      name: "Cheap",
+      name: "Trend",
       icon: IC.icTranding,
     ),
     Menu(
-      name: "Cheap",
+      name: "More",
       icon: IC.icFavorite,
     ),
   ];
 
   Widget _item(BuildContext context, int index) {
-    return Container(
-      width: (MediaQuery.of(context).size.width / 4) - 16,
-      height: 100,
-      decoration: BoxDecoration(
-        color: Colors.grey,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: SvgPicture.asset(menus[index].icon ?? ""),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          width: (MediaQuery.of(context).size.width / 4) - 16,
+          height: (MediaQuery.of(context).size.width / 4) - 16,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: AppColor.white
+          ),
+          padding: const EdgeInsets.all(21),
+          child: SvgPicture.asset(menus[index].icon ?? ""),
+        ),
+        const SizedBox(height: 10),
+        Text(
+          menus[index].name ?? "",
+          style: AppFont.smallMedium.copyWith(
+            color: AppColor.textSecondary,
+          ),
+        ),
+      ],
     );
   }
 }
@@ -51,5 +66,6 @@ class MenuDashboard extends StatelessWidget {
 class Menu {
   String? name;
   String? icon;
+
   Menu({this.name, this.icon});
 }

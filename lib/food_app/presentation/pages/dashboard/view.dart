@@ -22,19 +22,22 @@ class DashboardPage extends StatelessWidget {
 
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 54,
         ),
-        HeaderDashboard(),
-        SizedBox(
+        const HeaderDashboard(),
+        const SizedBox(
           height: 24,
         ),
-        TitleDashboard(),
-        SizedBox(
+        const TitleDashboard(),
+        const SizedBox(
           height: 24,
         ),
         MenuDashboard(),
-        TodaysPromo(),
+        const SizedBox(
+          height: 24,
+        ),
+        const TodaysPromo(),
       ],
     );
   }
